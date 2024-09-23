@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- tailwind and daisy ui cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- css file -->
+    <link rel="stylesheet" href="index.css">
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <!-- google font end -->
+     <!-- font-awesome cdn -->
+     <script src="https://kit.fontawesome.com/4d0aa73522.js" crossorigin="anonymous"></script>
+
+    <!-- tailwind custom script -->
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+                "primary-btn-color":'#B4F461'
+              }
+            }
+          }
+        }
+      </script>
+
+    <style>
+        .primary-font{
+            font-family: "Lexend", sans-serif;
+        }
+    </style>
+</head>
+<body>
+
+      <header >
+            <!-- navbar section starts here-->
+             <section class="  bg-[#EEF2E9]">
+                <div class="navbar  pt-1 container mx-auto">
+                  <div class="navbar-start ">
+                   
+                    <a class="btn btn-ghost text-xl bg-primary-btn-color md:px-8 ">Blog</a>
+                  </div>
+                  <div class="navbar-center mr-10 md:mr-0 ">
+                      <div class="flex justify-center items-center gap-5">
+                          <img src="assets/logo.png" alt="" class="" >
+                          <p class="md:text-xl md:font-bold font-semibold">Donate Bangladesh</p>
+                      </div>
+                  </div>
+                  <div class="navbar-end">
+                    <a class="btn px-1 md:px-3"><img src="assets/coin.png" alt=""><p class="font-bold">5500 BDT</p></a>
+                  </div>
+                </div>
+             </section>
+             <!-- navbar section ens here -->
+              <!-- button section starts here-->
+                <section class=" container mx-auto mt-10">
+                    <div class="flex justify-center gap-5">
+                        <button class="btn bg-primary-btn-color px-5 font-bold">Donation</button>
+                        <button class="btn px-5 font-bold">History</button>
+                    </div>
+                </section>
+              <!-- button section ends here -->
+      </header>
+
+      
+</body>
+</html>
