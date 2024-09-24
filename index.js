@@ -12,11 +12,29 @@
         alert("You provide wrong input")
     }else{
         const donationAmountInputNumber = getInputFieldValue("card1-donation-amount-input")
-        const updateDonationWalletValue = donationWalletValue - donationAmountInputNumber;
-        document.getElementById("donation-wallet").innerText = updateDonationWalletValue;
-        const updateDonatedAmountWalletValue = donatedAmountWalletValue + donationAmountInputNumber;
-        document.getElementById("card1-donated-amount-wallet").innerText = updateDonatedAmountWalletValue; 
-        showModal.showModal();
+        if(donationAmountInputNumber<0  ){
+            alert("You provide wrong input")
+        }else if(donationAmountInputNumber> donationWalletValue){
+            alert("Insufficient Balance")
+        }else{
+            const updateDonationWalletValue = donationWalletValue - donationAmountInputNumber;
+            document.getElementById("donation-wallet").innerText = updateDonationWalletValue;
+            const updateDonatedAmountWalletValue = donatedAmountWalletValue + donationAmountInputNumber;
+            document.getElementById("card1-donated-amount-wallet").innerText = updateDonatedAmountWalletValue; 
+            showModal.showModal();
+
+            const donationHistory = document.getElementById("donation-history");
+            const date = new Date();
+            document.getElementById("transaction-empty-text").classList.add("hidden");
+            donationHistory.innerHTML += `
+                <div class="p-7 border-2 border-gray-200 outline-none rounded-2xl space-y-5">
+                    <p>${donationAmountInputNumber} Taka is donated for Donate for Flood at Noakhali, Bangladesh</p>
+                    <p>${date}</p>
+                </div>
+            `
+
+        }
+       
     }
 
 
@@ -35,11 +53,27 @@ document.getElementById("card2-donation-btn").addEventListener("click",function(
         alert("You provide wrong input")
     }else{
         const donationAmountInputNumber = getInputFieldValue("card2-donation-amount-input")
-        const updateDonationWalletValue = donationWalletValue - donationAmountInputNumber;
-        document.getElementById("donation-wallet").innerText = updateDonationWalletValue;
-        const updateDonatedAmountWalletValue = donatedAmountWalletValue + donationAmountInputNumber;
-        document.getElementById("card2-donated-amount-wallet").innerText = updateDonatedAmountWalletValue; 
-        showModal.showModal();
+        if(donationAmountInputNumber<0  ){
+            alert("You provide wrong input")
+        }else if(donationAmountInputNumber> donationWalletValue){
+            alert("Insufficient Balance")
+        }else{
+            const updateDonationWalletValue = donationWalletValue - donationAmountInputNumber;
+            document.getElementById("donation-wallet").innerText = updateDonationWalletValue;
+            const updateDonatedAmountWalletValue = donatedAmountWalletValue + donationAmountInputNumber;
+            document.getElementById("card2-donated-amount-wallet").innerText = updateDonatedAmountWalletValue; 
+            showModal.showModal();
+
+            const donationHistory = document.getElementById("donation-history");
+            const date = new Date();
+            donationHistory.innerHTML += `
+                <div class="p-7 border-2 border-gray-200 outline-none rounded-2xl space-y-5">
+                    <p>${donationAmountInputNumber} Taka is donated for Donate for Flood Relief in Feni,Bangladesh</p>
+                    <p>${date}</p>
+                </div>
+            `
+        }
+       
     }
  
     
@@ -59,11 +93,27 @@ document.getElementById("card3-donation-btn").addEventListener("click",function(
         alert("You provide wrong input")
     }else{
         const donationAmountInputNumber = getInputFieldValue("card3-donation-amount-input")
-        const updateDonationWalletValue = donationWalletValue - donationAmountInputNumber;
-        document.getElementById("donation-wallet").innerText = updateDonationWalletValue;
-        const updateDonatedAmountWalletValue = donatedAmountWalletValue + donationAmountInputNumber;
-        document.getElementById("card3-donated-amount-wallet").innerText = updateDonatedAmountWalletValue;
-        showModal.showModal();
+        if(donationAmountInputNumber<0  ){
+            alert("You provide wrong input")
+        }else if(donationAmountInputNumber> donationWalletValue){
+            alert("Insufficient Balance")
+        }else{
+            const updateDonationWalletValue = donationWalletValue - donationAmountInputNumber;
+            document.getElementById("donation-wallet").innerText = updateDonationWalletValue;
+            const updateDonatedAmountWalletValue = donatedAmountWalletValue + donationAmountInputNumber;
+            document.getElementById("card3-donated-amount-wallet").innerText = updateDonatedAmountWalletValue;
+            showModal.showModal();
+
+            const donationHistory = document.getElementById("donation-history");
+            const date = new Date();
+            donationHistory.innerHTML += `
+                <div class="p-7 border-2 border-gray-200 outline-none rounded-2xl space-y-5">
+                    <p>${donationAmountInputNumber} Taka is donated for Aid for Injured in the Quota Movement</p>
+                    <p>${date}</p>
+                </div>
+            `
+        }
+     
     }
     
     
