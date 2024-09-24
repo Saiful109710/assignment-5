@@ -2,7 +2,7 @@
 
    
     const showModal = document.getElementById("my_modal_1")
-  document.getElementById("card1-donation-btn").addEventListener("click",function(){
+    document.getElementById("card1-donation-btn").addEventListener("click",function(){
     const donationWalletValue = getWalletValue("donation-wallet");
    
     const donatedAmountWalletValue = getWalletValue("card1-donated-amount-wallet")
@@ -120,3 +120,7 @@ document.getElementById("card3-donation-btn").addEventListener("click",function(
 })
 
 
+const blog = document.getElementById("blog")
+blog.addEventListener("click",function(){
+    window.location.href = "blogs.html"
+})
